@@ -1,0 +1,16 @@
+name = "firefly"
+main = "src/index.ts"
+compatibility_date = "2025-01-13"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "$R2_BUCKET_NAME"
+
+[[routes]]
+pattern = "$ZONE_NAME"
+zone_name = "$ZONE_NAME"
+custom_domain = true
+
+[vars]
+FALLBACK_404 = "$FALLBACK_404"
+AUTH_TOKEN = "$AUTH_TOKEN"
